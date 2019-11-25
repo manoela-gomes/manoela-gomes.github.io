@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html>
+<title>Guia de referência R</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #e0f3ff;
+}
+</style>
+<body>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-blue w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large " href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#home" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="#basicas" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Básicas</a>
+    <a href="#numeros" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Funções Matemáticas e de Arredondmento de Números>
+    <a href="#tipo" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Data Frame, vetores e tipos de dados</a>
+    <a href="#estatisticas" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Estatística</a>
+    <a href="#strings" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Strings e Caracteres</a>
+    <a href="#gráficos" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Gráficos</a>
+    <a href="#leitura" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Leitura e gravação de dados</a>
+  
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+   <a href="#home" class="w3-bar-item w3-button w3-padding-large">>Home</a>
+    <a href="#basicas" class="w3-bar-item w3-button w3-padding-large">Básicas</a>
+    <a href="#tipo" class="w3-bar-item w3-button w3-padding-large">Data Frame, vetores e tipos de dados</a>
+    <a href="#estatisticas" class="w3-bar-item w3-button w3-padding-large">Estatística</a>
+    <a href="#strings" class="w3-bar-item w3-button w3-padding-large">Strings e Caracteres</a>
+    <a href="#graficos" class="w3-bar-item w3-button w3-padding-large">Gráficos</a>
+    <a href="#leitura" class="w3-bar-item w3-button w3-padding-large">Leitura e gravação de dados</a>
+  </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header id="home" class="w3-container w3-gray w3-center" style="padding:128px 16px">
+  <h1 class="w3-margin w3-jumbo">Guia de referência R</h1>
+  <img src="img/r-lang.png" alt="Logo R" style="width:150px;height:150px;">
+</header>
+
+<!-- First Grid -->
+<div id ="basicas" class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Funções Básicas</h1>
+            <table>
+              <tr>
+                <th>Função</th>
+                <th>Uso</th>
+                <th>Argumentos</th>
+                <th>Saída</th>
+                <th>Exemplo</th>
+              </tr>
+              <tr>
+                <td>ls()</td>
+                <td>Lista os objetos do workspace</td>
+                <td> nenhum</td>
+                <td>lista de objetos</td>
+                <td>link para exemplo</td>
+              </tr>
+              <tr>
+                <td>rm(obj)</td>
+                <td>Exclui o objeto "obj"</td>
+                <td>objeto "obj"</td>
+                <td>nenhuma</td>
+                <td>link para exemplo</td>
+               
+              </tr>
+              <tr>
+                <td>help(fun)</td>
+                <td>Exibe o arquivo de ajuda da função "fun()"</td>
+                <td>função "fun()"</td>
+                <td>nenhuma</td>
+                <td>link para exemplo</td>
+                
+              </tr>
+              <tr>
+                <td>args(fun)</td>
+                <td>Lista os argumentos da função "fun()"</td>
+                <td>função "fun()"</td>
+                <td>os argumentos da função "fun()"</td>
+                <td>link para exemplo</td>
+                
+              </tr>
+              <tr>
+                <td>library(pact)</td>
+                <td>Adiciona à memória as funcionalidades do pacote 'pact'</td>
+                <td>pacote pact"</td>
+                <td>nenhuma</td>
+                <td>link para exemplo</td>
+              </tr>
+               <tr>
+                <td>install.packages("pact")</td>
+                <td>Baixa o pacote "pact" do repositório de pacotes do R</td>
+                <td>pacote "pact"</td>
+                <td>nenhuma</td>
+                <td>link para exemplo</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+               
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+           
+            </table>
+
+      
+
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div  id="numeros" class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Funções Matemáticas e de Arredondmento de Números</h1>
+  
+         <table>
+              <tr>
+                <th>Função</th>
+                <th>Uso</th>
+                <th>Parâmetros</th>
+                <th>Saída</th>
+                <th>Exemplo</th>
+              </tr>
+              <tr>
+                <td>abs(x)</td>
+                <td>calcula módulo de x</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>choose(x,y) </td>
+                <td>calcula combinação de x em y</td>
+                <td></td>
+                <td></td>
+                <td></td>
+               
+              </tr>
+              <tr>
+                <td>exp(x)</td>
+                <td>exponencial de x</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+              <tr>
+                <td>factorial(x)</td>
+                <td>calcula fatorial de x</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+              <tr>
+                <td>is.infinite(a/b)</td>
+                <td>calcula se a/b é infinito</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+              <tr>
+                <td>cos(x)</td>
+                <td>calcula cosseno de x radianos</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+              <tr>
+                <td>sin(x)</td>
+                <td>calcula seno de x radianos</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <tr>
+                <td>log(x,10) ou log10(x)</td>
+                <td>calcula log de x na base 10</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              </tr>
+                <tr>
+                <td>round(x,n)</td>
+                <td>arredonda x com aproximação de n casas decimais</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            
+              <tr>
+                <td>trunc(x)</td>
+                <td>arredonda x em zero</td>
+                <td></td>
+                <td></td>
+                <td></td>
+               
+              </tr>
+            </table>
+      
+  
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div  id="tipo" class="w3-row-padding  w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Funções de Estatística Descritiva</h1>
+  
+         <table>
+              <tr>
+                <th>Função</th>
+                <th>Uso</th>
+                <th>Parâmetros</th>
+                <th>Saída</th>
+                <th>Exemplo</th>
+              </tr>
+              <tr>
+                <td>mean(x)</td>
+                <td>calcula média dos valores de x</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>sd(x)</td>
+                <td>calcula desvio padrão dos valores de x</td>
+                <td></td>
+                <td></td>
+                <td></td>
+               
+              </tr>
+              <tr>
+                <td>var(x)</td>
+                <td>calcula variância dos valores de x</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+              <tr>
+                <td>median(x) </td>
+                <td>calcula mediana dos valores de x</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+              <tr>
+                <td>range(x)</td>
+                <td>calcula amplitude dos valores de x</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+               <tr>
+                <td>min(x)/max(x)</td>
+                <td>calcula o mínimo/máximo dos valores de x</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>quantile(x)</td>
+                <td>calcula quantis dos valores de x</td>
+                <td></td>
+                <td></td>
+                <td></td>
+               
+              </tr>
+              <tr>
+                <td>IQR(x)</td>
+                <td>calcula amplitude do intervalo interquartil dos valores de x</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+              <tr>
+                <td>table(dados)</td>
+                <td>tabela de valores de x</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+              <tr>
+                <td>summary(x)</td>
+                <td>retorna resumo de estatísticas descritivas</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+           
+            </table>
+      
+  
+    </div>
+  </div>
+</div>
+
+<div  id="estatisticas" class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Funções de Estatística Inferencial</h1>
+      <table>
+              <tr>
+                <th>Função</th>
+                <th>Uso</th>
+                <th>Parâmetros</th>
+                <th>Saída</th>
+               <th>Exemplo</th>
+              </tr>
+              <tr>
+                 <tr>
+                <td>cor(var1,var2, method=método)</td>
+                <td>correlação entre var1 e var2 calculada por método(Spearman,Kendall ou Pearson)</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              </tr>
+              <tr>
+                <td>t.test(amostra1, amostra1, opções)</td>
+                <td>realiza o teste t-Student para uma ou duas amostras utlizando opções(alternative,mu,paired,var.equal,conf.level)</td>
+                <td>amostra1,amostra1 e opções</td>
+                <td></td>
+                <td>
+                //para uma amostra independente</br>
+                amostra1 = c(14.9,13.4,14.5,13.5,15.0,13.9,14.9,16.4,14.6,15.4)</br>
+                t.test(amostra1,mu=15)</br>
+                //para duas amostras independentes</br>
+                amostra1 = c(16.6,13.4,14.6,15.1,12.9,15.2,14.0,16.6,15.4,13.0) amostra2 = c(15.8,17.9,18.2,20.2,18.1,17.8,18.3,18.6,17.0,18.4) t.test(amostra1, amostra2, var.equal = TRUE)</br>
+                //para duas amostras pareadas</br>
+                antes = c(16.6,13.4,14.6,15.1,12.9,15.2,14.0,16.6,15.4,13.0)</br>
+depois = c(15.8,17.9,18.2,20.2,18.1,17.8,18.3,18.6,17.0,18.4)</br>
+t.test(antes,depois,paired=TRUE)
+              </td>
+               
+              </tr>
+              <tr>
+                <td>prop.test(x, n, p, opções) </td>
+                <td>realiza o teste de proporções para uma ou duas amostras utilizando opções(correct,alternative,conf.level) </td>
+                <td></td>
+                <td></td>
+                <td>
+                //para uma proporção<br>
+                prop.test(104,200,0.6,correct=F)<br>
+                //para duas proporções <br>
+                prop.test(c(104,50),c(200,95),correct=F) </td>
+                
+              </tr>
+              <tr>
+                <td>fisher.test(x, opções)</td>
+                <td>realiza o teste exato de independência de linhas e colunas em uma tabela de contingência com as marginais fixas utilizando opções(alternative,conf.int,conf.level)  </td>
+                <td></td>
+                <td></td>
+                <td>Trabalho = matrix(c(1,2,1,0, 3,3,6,1, 10,10,14,9, 6,7,12,11), 4, 4,<br>
+                    dimnames = list(Receita=c("< 15mil", "15-25mil", "25-40mil", "> 40mil"),<br>
+                    Satisfação=c("M.Insatisfeito", "P.Insatisfeito", "Mod.Satisfeito", "M.Satisfeito"))) </td>
+                
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+               <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+               
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+           
+            </table>
+    </div>
+  </div>
+</div>
+
+<div  id="strings" class="w3-row-padding  w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Funções de Strings e Caracteres</h1>
+        <table>
+              <tr>
+                <th>Função</th>
+                <th>Uso</th>
+                <th>Parâmetros</th>
+                <th>Saída</th>
+                <th>Exemplo</th>
+              </tr>
+              <tr>
+                <td>casefold(x)/casefold(x,upper=TRUE)</td>
+                <td>coloca as letras de x em minúscula/coloca as letras de x em maiúscula</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>paste(x, ly=" ", sep=" " )</td>
+                <td> insere "ly" no final de cada elemento de x separando por "sep"</td>
+                <td></td>
+                <td></td>
+                <td></td>
+               
+              </tr>
+              <tr>
+                <td>substr(x,i,j)</td>
+                <td>extrai do caractere i ao j da string x</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+              <tr>
+                <td>nchar(x) </td>
+                <td>número de caracteres de x</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+              <tr>
+                <td>grep("a",x)</td>
+                <td>quais elementos de x contém "a"</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+               <tr>
+                <td>grep("a|b",x)</td>
+                <td>quais elementos de x contém "a" ou "b"</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>grepl("abc",x) </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+               
+              </tr>
+              <tr>
+                <td>strsplit(string,caractere)</td>
+                <td>separa string em itens retirando caractere</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+              <tr>
+                <td>startsWith(x,y)/endsWith(x,y)</td>
+                <td>retorna se x começa com y/ retorna se x termina com y</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+              <tr>
+                <td>cat(t1,t2)</td>
+                <td>concatena t1 e t2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+           
+            </table>
+    
+    </div>
+  </div>
+</div>
+
+<div  id="graficos" class="w3-row-padding  w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+     <h1>Funções de Gráficos</h1>   
+
+ <table>
+              <tr>
+                <th>Função</th>
+                <th>Uso</th>
+                <th>Parâmetros</th>
+                <th>Saída</th>
+                <th>Exemplo</th>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+               
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+               <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+               
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+           
+            </table>
+   
+    </div>
+  </div>
+</div>
+
+
+
+<div  id="tipo" class="w3-row-padding  w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+     <h1>Funções de Leitura e Escrita</h1>   
+
+
+ <table>
+              <tr>
+                <th>Função</th>
+                <th>Uso</th>
+                <th>Parâmetros</th>
+                <th>Saída</th>
+                <th>Uso</th>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+               
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+               <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+               
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+           
+            </table>
+
+   
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <p class="w3-margin">Desenvolvido por </p>
+    <p class="w3-margin">Manoela Gomes</p>
+    <p class="w3-margi">30/10/2019</p>
+    <p class="w3-margin">Ribeirão Preto</p>
+
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
+  <div class="w3-xlarge w3-padding-32">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+ </div>
+ <p>Powered by <a href="https://github.com/" target="_blank">GitHub</a></p>
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
