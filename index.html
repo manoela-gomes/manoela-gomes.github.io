@@ -81,11 +81,11 @@ tr:nth-child(even) {
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large " href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="#home" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
     <a href="#basicas" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Básicas</a>
-    <a href="#numeros" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Funções Matemáticas e de Arredondmento de Números>
-    <a href="#tipo" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Data Frame, vetores e tipos de dados</a>
-    <a href="#estatisticas" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Estatística</a>
+    <a href="#numeros" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Funções Matemáticas e de Arredondmento de Números</a>
+    <a href="#tipo" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Estatística Descritiva</a>
+    <a href="#estatisticas" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Estatística Inferencial</a>
     <a href="#strings" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Strings e Caracteres</a>
-    <a href="#gráficos" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Gráficos</a>
+    <a href="#graficos" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Gráficos</a>
     <a href="#leitura" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Leitura e gravação de dados</a>
   
   </div>
@@ -111,94 +111,59 @@ tr:nth-child(even) {
 
 <!-- First Grid -->
 <div id ="basicas" class="w3-row-padding w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-twothird">
+  <div >
+    <div>
       <h1>Funções Básicas</h1>
-            <table>
+           <table>
               <tr>
                 <th>Função</th>
                 <th>Uso</th>
-                <th>Argumentos</th>
-                <th>Saída</th>
+                <th>Principais Argumentos</th>
                 <th>Exemplo</th>
               </tr>
               <tr>
-                <td>ls()</td>
-                <td>Lista os objetos do workspace</td>
-                <td> nenhum</td>
-                <td>lista de objetos</td>
-                <td>link para exemplo</td>
+                <td>ls</td>
+                <td>retorna um vetor de cadeias de caracteres listando os objetos do workspace</td>
+                <td>nome - qual ambiente usar para listar os objetos disponíveis.
+                <td>> ls(pattern = "O") <br>
+                  [1] character(0)</td>
               </tr>
               <tr>
-                <td>rm(obj)</td>
-                <td>Exclui o objeto "obj"</td>
-                <td>objeto "obj"</td>
-                <td>nenhuma</td>
-                <td>link para exemplo</td>
+                <td>rm</td>
+                <td>remove e rm podem ser usados ​​para remover objetos.</td>
+                <td>x - objetos a serem removidos, como nomes (sem aspas) ou cadeias de caracteres (entre aspas)</td>
+                <td>> tmp <- 1:4 ## work with tmp  and cleanup<br>
+                > rm(tmp)</td>
                
               </tr>
               <tr>
-                <td>help(fun)</td>
-                <td>Exibe o arquivo de ajuda da função "fun()"</td>
-                <td>função "fun()"</td>
-                <td>nenhuma</td>
-                <td>link para exemplo</td>
+                <td>help</td>
+                <td>exibe um arquivo de ajuda da função </td>
+                <td>topic - nome ou sequência de caracteres especificando o tópico para o qual a ajuda é solicitada; package - nome ou vetor de caractere que fornece os pacotes para procurar documentação.</td>
+                <td>> help(help)</td>
                 
               </tr>
               <tr>
-                <td>args(fun)</td>
-                <td>Lista os argumentos da função "fun()"</td>
-                <td>função "fun()"</td>
-                <td>os argumentos da função "fun()"</td>
-                <td>link para exemplo</td>
+                <td>args</td>
+                <td>exibe os nomes dos argumentos e os valores padrão correspondentes de uma função ou primitiva.</td>
+                <td>name - uma função (um fechamento ou uma primitiva). Se nome é uma cadeia de caracteres, a função com esse nome é encontrada e usada.</td>
+                <td> > args(1:10) <br>
+                [1] NULL</td>
                 
               </tr>
               <tr>
-                <td>library(pact)</td>
-                <td>Adiciona à memória as funcionalidades do pacote 'pact'</td>
-                <td>pacote pact"</td>
-                <td>nenhuma</td>
-                <td>link para exemplo</td>
+                <td>library</td>
+                <td>Adiciona à memória as funcionalidades de um pacote</td>
+                <td>package, help - nome de um pacote.<br></td>
+                <td>> library(splines)</td>
               </tr>
                <tr>
-                <td>install.packages("pact")</td>
-                <td>Baixa o pacote "pact" do repositório de pacotes do R</td>
-                <td>pacote "pact"</td>
-                <td>nenhuma</td>
-                <td>link para exemplo</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-               
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                
-              </tr>
+                <td>install.packages</td>
+                <td>Baixa um pacote  do repositório de pacotes do R</td>
+                <td>pkgs - vetor de caracteres dos nomes dos pacotes cujas versões atuais devem ser baixadas dos repositórios.
+                </td>
+                <td> > install.packages(c("ncdf4", "RNetCDF"), configure.args = c(RNetCDF = "--with-netcdf-include=/usr/include/udunits2"))</td>
+                </tr>
            
             </table>
 
@@ -210,95 +175,86 @@ tr:nth-child(even) {
 
 <!-- Second Grid -->
 <div  id="numeros" class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-twothird">
-      <h1>Funções Matemáticas e de Arredondmento de Números</h1>
+  <div >
+    <div >
+      <h1>Funções Matemáticas e de Arredondamento de Números</h1>
   
          <table>
               <tr>
                 <th>Função</th>
                 <th>Uso</th>
-                <th>Parâmetros</th>
-                <th>Saída</th>
+                <th>Principais Argumentos</th>
                 <th>Exemplo</th>
               </tr>
               <tr>
-                <td>abs(x)</td>
-                <td>calcula módulo de x</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>abs</td>
+                <td>calcula módulo</td>
+                <td>x- um vetor ou matriz numérica ou complexa</td>
+                <td> > abs(-1:1)<br>
+                  [1] 1 0 1
+                </td>
               </tr>
               <tr>
-                <td>choose(x,y) </td>
-                <td>calcula combinação de x em y</td>
-                <td></td>
-                <td></td>
-                <td></td>
-               
-              </tr>
+                <td>choose</td>
+                <td>calcula combinação</td>
+                <td>a, b - vetores numéricos não negativos; x, n - vetores numéricos; k, deriv -vetores inteiros</td>
+                <td>> choose(5, 2) <br>
+                [1] 10</td>
+                </tr>
               <tr>
-                <td>exp(x)</td>
+                <td>exp</td>
                 <td>exponencial de x</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>x - um vetor numérico ou complexo; base - um número positivo ou complexo: a base em relação à qual os logaritmos são calculados</td>
+                <td> > log(exp(3)) <br>
+                  [1] 3</td>
                 
               </tr>
               <tr>
-                <td>factorial(x)</td>
+                <td>factorial</td>
                 <td>calcula fatorial de x</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>x - um vetor numérico</td>
+                <td> > factorial(100)<br>
+                [1] 9.332622e+157</td>
                 
               </tr>
               <tr>
-                <td>is.infinite(a/b)</td>
+                <td>is.infinite</td>
                 <td>calcula se a/b é infinito</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>x - Objeto R a ser testado: os métodos padrão lidam com vetores atômicos</td>
+                <td> > isfinite(pi/ 0)<BR>
+                  [1] TRUE </td>
                 
               </tr>
               <tr>
-                <td>cos(x)</td>
+                <td>cos</td>
                 <td>calcula cosseno de x radianos</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>x - vetor numérico ou complexo</td>
+                <td> > cos(2*pi)<BR>
+                  [1] 0 </td></td>
                 
               </tr>
               <tr>
-                <td>sin(x)</td>
+                <td>sin</td>
                 <td>calcula seno de x radianos</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>x - vetor numérico ou complexo</td>
+                <td>> sin(2*pi)<BR>
+                  [1] 1 </td>
                 <tr>
-                <td>log(x,10) ou log10(x)</td>
+                <td>log</td>
                 <td>calcula log de x na base 10</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                 <td>x - um vetor numérico ou complexo; base - um número positivo ou complexo: a base em relação à qual os logaritmos são calculados</td>
+                <td> > log10(1e7)<br>
+                [1] 7</td>
               </tr>
               </tr>
                 <tr>
-                <td>round(x,n)</td>
+                <td>round</td>
                 <td>arredonda x com aproximação de n casas decimais</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>x - numérico a ser arredondado; n - indicando dígitos decimais</td>
+                <td>> round(.5 + -2:4) <br>
+                [1] -2  0  0  2  2  4  4</td>
               </tr>
             
-              <tr>
-                <td>trunc(x)</td>
-                <td>arredonda x em zero</td>
-                <td></td>
-                <td></td>
-                <td></td>
-               
-              </tr>
             </table>
       
   
@@ -308,93 +264,107 @@ tr:nth-child(even) {
 
 <!-- Second Grid -->
 <div  id="tipo" class="w3-row-padding  w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-twothird">
+  <div >
+    <div >
       <h1>Funções de Estatística Descritiva</h1>
   
          <table>
               <tr>
                 <th>Função</th>
                 <th>Uso</th>
-                <th>Parâmetros</th>
-                <th>Saída</th>
+                <th>Principais Argumentos</th>
                 <th>Exemplo</th>
               </tr>
               <tr>
-                <td>mean(x)</td>
-                <td>calcula média dos valores de x</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>mean</td>
+                <td>Calcula média dos valores de x</td>
+                <td>x - objeto R; trim -  fração (0 a 0,5) a ser cortada de cada extremidade de x; na.rm - valor lógico indicando se os valores de NA devem ser removidos antes que o cálculo prossiga. 
+               </td>
+                <td> > x <- c(rnorm(900), rnorm(100, sd = 1000))<br>
+                    > mean(x)<br>
+                    [1] -5.071665
+                    > mean(x, trim = 0.1)<br>
+                    [1] 0.01834888
               </tr>
               <tr>
-                <td>sd(x)</td>
-                <td>calcula desvio padrão dos valores de x</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>sd</td>
+                <td>Calcula desvio padrão dos valores de x</td>
+                <td>x - objeto R <br>
+                na.rm - valor lógico indicando se os valores de NA devem ser removidos antes que o cálculo prossiga</td>
+                <td> > sd(1:2) ^ 2<br>
+                [1] 0.5</td>
                
               </tr>
               <tr>
-                <td>var(x)</td>
+                <td>Var</td>
                 <td>calcula variância dos valores de x</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>x - objeto R; na.rm - valor lógico indicando se os valores de NA devem ser removidos antes que o cálculo prossiga</td> 
+                <td> > var(1:10) <br> 
+                        [1] 9.166667<br>
+                        > var(1:5, 1:5)<br>
+                        [1] 2.5 
+                    </td>
                 
               </tr>
               <tr>
-                <td>median(x) </td>
-                <td>calcula mediana dos valores de x</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                
+                <td>Median</td>
+                <td>Calcula mediana dos valores de x</td>
+               <td>x - objeto R; na.rm - valor lógico indicando se os valores de NA devem ser removidos antes que o cálculo prossiga</td>
+               <td> > median(1:4) <br>
+                        [1] 2.5</td>
               </tr>
               <tr>
-                <td>range(x)</td>
-                <td>calcula amplitude dos valores de x</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>range</td>
+                <td>Calcula amplitude dos valores de x</td>
+                <td>x - objeto R; na.rm - valor lógico indicando se os valores de NA devem ser removidos antes que o cálculo prossiga<br></td>
+                <td> > r.x <- range(stats::rnorm(100))
+                        [1] -3.081389  2.158902</td>
               </tr>
                <tr>
-                <td>min(x)/max(x)</td>
-                <td>calcula o mínimo/máximo dos valores de x</td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
+                <td>min/max</td>
+                <td>Calcula o mínimo/máximo dos valores de x</td>
+                <td>x - objeto R; na.rm - valor lógico indicando se os valores de NA devem ser removidos antes que o cálculo prossiga</td>
+                <td> > vector<- c(1,7,3,5,19)<br> 
+                        > max(vector)<br>
+                       [1] 19 </td>
+                </tr>
               <tr>
-                <td>quantile(x)</td>
-                <td>calcula quantis dos valores de x</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>quantile</td>
+                <td>Calcula quantis dos valores de x</td>
+                <td>x - objeto R; type - número inteiro entre 1 e 9 selecionando um dos nove algoritmos quantílicos detalhados abaixo a serem usados</td>
+                <td> > quantile(x <- rnorm(1001)) <br>
+                          0%         25%         50%         75%        100% ) <br>
+                      -2.66691700 -0.74716267 -0.02535173  0.70762213  3.46980464 </td>
                
               </tr>
               <tr>
-                <td>IQR(x)</td>
-                <td>calcula amplitude do intervalo interquartil dos valores de x</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                
+                <td>IQR</td>
+                <td>Calcula amplitude do intervalo interquartil dos valores de x</td>
+                <td>x- um vetor numérico; tipo - um número inteiro selecionando um dos muitos algoritmos quantílicos</td>
+                <td> > IQR(rivers)<br>
+                [1] 370 </td>
               </tr>
               <tr>
-                <td>table(dados)</td>
-                <td>tabela de valores de x</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                
+                <td>table</td>
+                <td>Tabela de valores de x</td>
+                <td>y - um vetor numérico; 
+                x -  objeto R arbitrário ou um objeto herdado da classe "tabela" para o método as.data.frame); 
+                stringsAsFactors - caso  true , os fatores de classificação devem ser retornados como fatores (o padrão) ou vetores de caracteres?
+                </td>
+
+                <td> > require(stats) # for rpois and xtabs<br>
+                        > table(rpois(100, 5)) ## Simple frequency distribution <br>
+
+                       0  1  2  3  4  5  6  7  8  9 10 13 <br>
+                    [1] 1  3  9 12 13 23 12  9  9  5  1  3  </td>
               </tr>
               <tr>
                 <td>summary(x)</td>
-                <td>retorna resumo de estatísticas descritivas</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>Retorna resumo de estatísticas descritivas</td>
+                <td>y - objeto para o qual um resumo é desejado; 
+                x - resultado do método padrão de summary ()
+                </td>
+                <td><img src="img/sum.png" alt="Exemplo summary R" style="width:300px;height:250px;"><br> </td>
                 
               </tr>
            
@@ -406,407 +376,268 @@ tr:nth-child(even) {
 </div>
 
 <div  id="estatisticas" class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-twothird">
+  <div >
+    <div >
       <h1>Funções de Estatística Inferencial</h1>
       <table>
               <tr>
                 <th>Função</th>
                 <th>Uso</th>
-                <th>Parâmetros</th>
-                <th>Saída</th>
-               <th>Exemplo</th>
+                <th>Principais Argumentos</th>
+                 <th>Exemplo</th>
               </tr>
               <tr>
                  <tr>
-                <td>cor(var1,var2, method=método)</td>
+                <td>cor</td>
                 <td>correlação entre var1 e var2 calculada por método(Spearman,Kendall ou Pearson)</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>x - vetor numérico, matriz ou quadro de dados; 
+                y - NULL (padrão) ou um vetor, matriz ou quadro de dados com dimensões compatíveis para x
+                </td>
+                <td> > cor(1:10, 2:11)<br>
+                    [1] 1</td>
               </tr>
               </tr>
               <tr>
-                <td>t.test(amostra1, amostra1, opções)</td>
+                <td>t.test</td>
                 <td>realiza o teste t-Student para uma ou duas amostras utlizando opções(alternative,mu,paired,var.equal,conf.level)</td>
-                <td>amostra1,amostra1 e opções</td>
-                <td></td>
-                <td>
-                //para uma amostra independente</br>
-                amostra1 = c(14.9,13.4,14.5,13.5,15.0,13.9,14.9,16.4,14.6,15.4)</br>
-                t.test(amostra1,mu=15)</br>
-                //para duas amostras independentes</br>
-                amostra1 = c(16.6,13.4,14.6,15.1,12.9,15.2,14.0,16.6,15.4,13.0) amostra2 = c(15.8,17.9,18.2,20.2,18.1,17.8,18.3,18.6,17.0,18.4) t.test(amostra1, amostra2, var.equal = TRUE)</br>
-                //para duas amostras pareadas</br>
-                antes = c(16.6,13.4,14.6,15.1,12.9,15.2,14.0,16.6,15.4,13.0)</br>
-depois = c(15.8,17.9,18.2,20.2,18.1,17.8,18.3,18.6,17.0,18.4)</br>
-t.test(antes,depois,paired=TRUE)
-              </td>
-               
+                <td>x- vetor numérico (não vazio) de valores de dados; y - um vetor numérico opcional (não vazio) de valores de dados</td>
+                <td><img src="img/t.png" alt="Exemplo teste-t R" style="width:300px;height:250px;"></td>
               </tr>
               <tr>
-                <td>prop.test(x, n, p, opções) </td>
+                <td>prop.test</td>
                 <td>realiza o teste de proporções para uma ou duas amostras utilizando opções(correct,alternative,conf.level) </td>
-                <td></td>
-                <td></td>
-                <td>
-                //para uma proporção<br>
-                prop.test(104,200,0.6,correct=F)<br>
-                //para duas proporções <br>
-                prop.test(c(104,50),c(200,95),correct=F) </td>
-                
+                <td>x - vetor numérico, matriz ou quadro de dados <br>
+                  y - NULL (padrão) ou um vetor, matriz ou quadro de dados com dimensões compatíveis para x<br>
+                  na.rm - caso true, valores ausentes devem ser removidos<br>
+                  use - uma cadeia de caracteres opcional que fornece um método para calcular covariâncias na presença de valores ausentes<br>
+                  method - cadeia de caracteres indicando qual coeficiente de correlação (ou covariância) deve ser calculado<br>
+                  v - matriz numérica simétrica, geralmente positiva definida como uma matriz de covariância
+                </td>
+                <td><img src="img/prop.png" alt="Exemplo teste de proporção R" style="width:300px;height:250px;"></td>
               </tr>
               <tr>
-                <td>fisher.test(x, opções)</td>
+                <td>fisher.test</td>
                 <td>realiza o teste exato de independência de linhas e colunas em uma tabela de contingência com as marginais fixas utilizando opções(alternative,conf.int,conf.level)  </td>
-                <td></td>
-                <td></td>
-                <td>Trabalho = matrix(c(1,2,1,0, 3,3,6,1, 10,10,14,9, 6,7,12,11), 4, 4,<br>
-                    dimnames = list(Receita=c("< 15mil", "15-25mil", "25-40mil", "> 40mil"),<br>
-                    Satisfação=c("M.Insatisfeito", "P.Insatisfeito", "Mod.Satisfeito", "M.Satisfeito"))) </td>
+                <td>x - uma tabela de contingência bidimensional em forma de matriz ou um objeto de fator; y - um objeto fator; ignorado se x é uma matriz
+                </td>
+                <td><img src="img/fisher.png" alt="Exemplo teste de fisher R" style="width:300px;height:250px;"></td>
                 
               </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-               
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                
-              </tr>
-           
             </table>
     </div>
   </div>
 </div>
 
 <div  id="strings" class="w3-row-padding  w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-twothird">
+  <div >
+    <div >
       <h1>Funções de Strings e Caracteres</h1>
         <table>
               <tr>
                 <th>Função</th>
                 <th>Uso</th>
-                <th>Parâmetros</th>
-                <th>Saída</th>
+                <th>Principais Argumentos</th>
                 <th>Exemplo</th>
               </tr>
               <tr>
-                <td>casefold(x)/casefold(x,upper=TRUE)</td>
+                <td>casefold</td>
                 <td>coloca as letras de x em minúscula/coloca as letras de x em maiúscula</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>x - vetor de caractere ou um objeto que pode ser coagido a caractere por as.character;
+                upper - traduzir para maiúsculas ou minúsculas
+                </td>
+                <td>> x <- "MiXeD cAsE 123"<br>
+                > toupper(x)<br>
+                [1] "MIXED CASE 123"
+                </td>
               </tr>
               <tr>
-                <td>paste(x, ly=" ", sep=" " )</td>
-                <td> insere "ly" no final de cada elemento de x separando por "sep"</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>paste</td>
+                <td>insere caractere no final de cada elemento de x separando por "sep"</td>
+                <td>x - objeto do tipo string; sep - uma cadeia de caracteres para separar os termos</td>
+                <td>
+                <img src="img/paste.png" alt="Exemplo paste R" style="width:300px;height:250px;"></td>
                
               </tr>
               <tr>
-                <td>substr(x,i,j)</td>
+                <td>substr</td>
                 <td>extrai do caractere i ao j da string x</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>x,text - um vetor de caracteres; start - primeiro elemento a ser substituído; finish - último elemento a ser substituído</td>
+                <td>  > substr("abcdef", 2, 4)<br>
+                      [1] "bcd"</td>
                 
               </tr>
               <tr>
-                <td>nchar(x) </td>
+                <td>nchar</td>
                 <td>número de caracteres de x</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>x
+                x- vetor de caracteres ou um vetor a ser coagido a um vetor de caracteres; type - sequência de caracteres: correspondência parcial a um de c ("bytes", "caracteres", "largura"). Veja detalhes'.</td>
+                <td>> x <- c("asfef", "qwerty", "yuiop[", "b", "stuff.blah.yech")<br>
+                    > nchar(x)<br>
+                   [1]  5  6  6  1 15</td>
                 
               </tr>
               <tr>
-                <td>grep("a",x)</td>
-                <td>quais elementos de x contém "a"</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>grep</td>
+                <td>procura elementos em uma string</td>
+                <td>pattern - sequência de caracteres que contém uma expressão regular;
+                x, text - um vetor de caractere em que as correspondências são procuradas
+                </td>
+                <td>> haystack <- c("red", "blue", "green", "blue", "green forest")<br>
+                    > grep("green", haystack)<br>
+                    [1] 3 5<br>
+                    > grep("r", haystack) # returns position<br>
+                    [1] 1 3 5</td>
               </tr>
+              <tr>
+                <td>strsplit</td>
+                <td>divide os elementos de um vetor de caracteres</td>
+                <td>x - vetor de caractere, cada elemento do qual deve ser dividido, split - vetor de caractere contendo expressão regular</td>
+                <td>> x <- "Do you wish you were Mr. Jones?"<br>
+                    > strsplit(x, ". ") <br>
+                   
+                    [1] "D"      "yo"     "wis"    "yo"     "wer"    "Mr"<br>
+                    [7] "Jones?"</td>
+                
+              </tr>
+              <tr>
+                <td>startsWith</td>
+                <td>retorna se x começa/termina com com prefixo/sufixo</td>
+                <td>x - vetor da cadeia de caracteres cujos "começos" são considerados; prefix, sufixo - vetor de caracteres</td>
+                <td>> startsWith(search(), "package:") # typically at least two FALSE, nowadays often three<br>
+                    [1] FALSE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE  TRUE</td>
+                </tr>
                <tr>
-                <td>grep("a|b",x)</td>
-                <td>quais elementos de x contém "a" ou "b"</td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>grepl("abc",x) </td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-               
-              </tr>
-              <tr>
-                <td>strsplit(string,caractere)</td>
-                <td>separa string em itens retirando caractere</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                
-              </tr>
-              <tr>
-                <td>startsWith(x,y)/endsWith(x,y)</td>
-                <td>retorna se x começa com y/ retorna se x termina com y</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                
-              </tr>
-              <tr>
-                <td>cat(t1,t2)</td>
-                <td>concatena t1 e t2</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                
-              </tr>
-           
+                <td>cat</td>
+                <td>concatena strings</td>
+                <td>x,y... -  objetos a serem concatenados; sep - um vetor de caracteres de cadeias para acrescentar após cada elemento</td>
+                <td>> iter <- stats::rpois(1, lambda = 10)<br>
+                > ## print an informative message<br>
+                > cat("iteration = ", iter <- iter + 1, "\n")<br>
+                iteration =  7 </td>
+                </tr>
             </table>
     
     </div>
   </div>
 </div>
 
-<div  id="graficos" class="w3-row-padding  w3-light-grey w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-twothird">
+<div id="graficos" class="w3-row-padding  w3-light-grey w3-padding-64 w3-container">
+  <div>
+    <div>
      <h1>Funções de Gráficos</h1>   
 
  <table>
               <tr>
                 <th>Função</th>
                 <th>Uso</th>
-                <th>Parâmetros</th>
-                <th>Saída</th>
-                <th>Exemplo</th>
+                <th>Principais Argumentos</th>
+                <th>Uso</th>
               </tr>
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>plot</td>
+                <td>função genérica para plotagem de objetos R</td>
+                <td>x - as coordenadas x dos pontos no gráfico;  y -  as coordenadas y dos pontos no gráfico</td>
+                <td>> require(stats) #for cars <br>
+                    > plot(cars)<br>
+                    <img src="img/plot.png" alt="Exemplo Plot R" style="width:300px;height:250px;">
+                  </td>
               </tr>
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>hist</td>
+                <td>função genérica hist calcula um histograma do valor de dados fornecido</td>
+                <td>x- vetor de valores para o qual o histograma é desejado;
+                breaks - vetor que fornece os pontos de interrupção entre as células do histograma, função para calcular o vetor de pontos de interrupção, único número fornecendo o número de células para o histograma ou uma sequência de caracteres que nomeia um algoritmo para calcular o número de células
+                </td>
+                <td>>hist(sqrt(islands), breaks = 12, col = "lightblue", border = "pink")<br>
+                <img src="img/hist.png" alt="Exemplo Histograma t R" style="width:300px;height:250px;"></td>
                
               </tr>
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>boxplot</td>
+                <td>produza gráficos de caixa dos valores fornecidos</td>
+                <td>x - dados a partir dos quais os gráficos de caixa devem ser produzidos;
+                formula - fórmula, como y ~ grp, em que y é um vetor numérico de valores de dados a ser dividido em grupos de acordo com a variável de agrupamento grp 
+                </td>
+                <td> >boxplot(mtcars$mpg)<br>
+                  <img src="img/boxplot.png" alt="Exemplo Boxplot R" style="width:300px;height:250px;"></td>
                 
               </tr>
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                
+                <td>barplot</td>
+                <td>cria uma plotagem de barras com barras verticais ou horizontais</td>
+                <td>data - quadro de dados (ou lista) do qual as variáveis ​​na fórmula devem ser obtidas; height - vetor ou matriz de valores descrevendo as barras que compõem o gráfico; width - vetor opcional de larguras de barra
+                </td>
+                <td>> tN <- table(Ni <- stats::rpois(100, lambda = 5))<br>
+                    > r <- barplot(tN, col = rainbow(20))<br>
+                    <img src="img/barplot.png" alt="Exemplo Barplot R" style="width:300px;height:250px;"></td></td>  
               </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                
-              </tr>
-               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-               
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                
-              </tr>
-           
             </table>
-   
     </div>
   </div>
 </div>
 
 
 
-<div  id="tipo" class="w3-row-padding  w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-twothird">
+<div  id="leitura" class="w3-row-padding  w3-padding-64 w3-container">
+  <div >
+    <div >
      <h1>Funções de Leitura e Escrita</h1>   
 
 
  <table>
-              <tr>
+               <tr>
                 <th>Função</th>
                 <th>Uso</th>
-                <th>Parâmetros</th>
-                <th>Saída</th>
-                <th>Uso</th>
+                <th>Principais Argumentos</th>
+                <th>Exemplo</th>
               </tr>
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>read.csv</td>
+                 <td>leitura de um arquivo no formato de tabela e cria um quadro de dados a partir dele, com casos correspondentes a linhas e variáveis ​​para os campos no arquivo.</td>
+                <td>file - nome do arquivo do qual os dados devem ser lidos; header - valor lógico indicando se o arquivo contém os nomes das variáveis ​​como sua primeira linha; sep - o caractere separador de campo</td>
+                <td>test1 <- c(1:5, "6,7", "8,9,10") <br>
+                > tf <- tempfile()<br>
+                > writeLines(test1, tf)<br>
+                > read.csv(tf, fill = TRUE) <br>
+                  X1<br>
+                1  2<br>
+                2  3<br>
+                3  4<br>
+                4  5<br>
+                5  6<br>
+                6  7<br>
+                7  8<br>
+                8  9<br>
+                9 10</td>
+              </tr>
+                <tr>
+                <td>read.table</td>
+                 <td>leitura de um arquivo no formato de tabela e cria um quadro de dados a partir dele, com casos correspondentes a linhas e variáveis ​​para os campos no arquivo</td>
+                <td>file - nome do arquivo do qual os dados devem ser lidos; header - valor lógico indicando se o arquivo contém os nomes das variáveis ​​como sua primeira linha; sep - o caractere separador de campo</td>
+                <td>> read.table(header = TRUE, text = "a b 1 2 3 4")) <br>
+                a b<br>
+                1 1 2<br>
+                2 3 4</td> 
+              </tr>
+                <tr>
+                <td>data</td>
+                <td>carrega os conjuntos de dados especificados ou lista os conjuntos de dados disponíveis</td>
+                <td>x - cadeias de caracteres literais ou nomes, data - um vetor de caractere que fornece o pacote para procurar conjuntos de dados</td>
+                <td> > data(USArrests, "VADeaths")  # load the data sets 'USArrests' and 'VADeaths'</td>
               </tr>
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-               
+                <td>write.table</td>
+                <td>imprime o argumento necessário x</td>
+                <td>x - objeto a ser escrito, de preferência uma matriz ou quadro de dados; file - sequência de caracteres nomeando um arquivo ou uma conexão aberta para gravação</td>
+                <td> > x <- data.frame(a = I("a \" quote"), b = pi)<br>
+                > write.table(x, file = "foo.csv", sep = ",", col.names = NA, qmethod = "double") ## To write a CSV file for input to Excel one might use</td>               
               </tr>
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                
+                <td>write.csv</td>
+                <td>imprime o argumento necessário x</td>
+                <td>x - objeto a ser escrito, de preferência uma matriz ou quadro de dados; file - sequência de caracteres nomeando um arquivo ou uma conexão aberta para gravação</td>
+                <td> > write.csv(x, file = "foo.csv") ### alternatively</td>            
               </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                
-              </tr>
-               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-               
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                
-              </tr>
-           
             </table>
 
    
@@ -820,16 +651,14 @@ t.test(antes,depois,paired=TRUE)
 <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
     <p class="w3-margin">Desenvolvido por </p>
     <p class="w3-margin">Manoela Gomes</p>
-    <p class="w3-margi">30/10/2019</p>
+    <p class="w3-margi">15/12/2019</p>
     <p class="w3-margin">Ribeirão Preto</p>
-
+    <p class="w3-margin">Funções e exemplos retirados do site :</p>
+    <a href = "https://www.rdocumentation.org/">RDocumentation</a>
 </div>
 
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center w3-opacity">  
-  <div class="w3-xlarge w3-padding-32">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
- </div>
  <p>Powered by <a href="https://github.com/" target="_blank">GitHub</a></p>
 </footer>
 
